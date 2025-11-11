@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GO TO WORLD!</title>
+</head>
+
+<body>
+    <center><img src="logo.png" width="40%" height="20%"></center>
+    <center><h1>Agenzia Viaggi All'Estero Numero 1!</h1></center><br>
+    <hr>
+
+    <form action="agenzia_viaggi.php" method="post">
+        DATI CLIENTE:<br><br>
+        INSERIRE IL COGNOME <pre><input type="text" name="cognome"></pre><br>
+        INSERIRE IL NOME <pre><input type="text" name="nome"></pre><br>
+        INSERIRE EMAIL <pre><input type="text" name="email"></pre><br>
+        INSERIRE LA CITTA' DI RESIDENZA <pre><input type="text" name="residenza"></pre><br>
+        INSERIRE IL RECAPITO TELEFONICO <pre><input type="text" name="numero"></pre><br>
+        INSERIRE NUMERO CARTA DI IDENTITA' <pre><input type="text" name="cartaidentita"></pre><br>
+        INSERIRE CODICE FISCALE <pre><input type="text" name="codicefiscale"></pre><br>
+
+        PACCHETTI:<br>
+        <select name="pacchetti">
+            <option value="Giappone">Giappone (12 Giorni= 5465)</option>
+            <option value="Corea Del Sud">Corea Del Sud (10 Giorni= 4986)</option>
+            <option value="Cina">Cina (7 Giorni= 3657)</option>
+            <option value="Canada">Canada (14 Giorni= 6745)</option>
+            <option value="Messico">Messico (5 Giorni= 3865)</option>
+        </select>
+
+        <br><br><br>
+
+        DESTINAZIONE:<br>
+        - Giappone <br><br>
+        <input type="radio" name="destinazione" value="Tokyo"> Tokyo <br><br>
+        <input type="radio" name="destinazione" value="Kyoto"> Kyoto <br><br><br>
+        - Corea Del Sud <br><br>
+        <input type="radio" name="destinazione" value="Seoul"> Seoul <br><br>
+        <input type="radio" name="destinazione" value="Isola Di Jeju"> Isola Di Jeju <br><br><br>
+        - Cina <br><br>
+        <input type="radio" name="destinazione" value="Pechino"> Pechino <br><br>
+        <input type="radio" name="destinazione" value="Shangai"> Shangai <br><br><br>
+        - Canada <br><br>
+        <input type="radio" name="destinazione" value="Toronto"> Toronto <br><br>
+        <input type="radio" name="destinazione" value="Kingston"> Kingston <br><br><br>
+        - Messico<br><br>
+        <input type="radio" name="destinazione" value="Citta Del Messico"> Citta Del Messico <br><br>
+        <input type="radio" name="destinazione" value="Monterrey"> Monterrey <br><br><br>
+
+        DATE:<br>
+        <input type="radio" name="date" value="Settembre"> Settembre <br>
+        <input type="radio" name="date" value="Ottobre"> Ottobre <br>
+        <input type="radio" name="date" value="Marzo"> Marzo <br>
+        <input type="radio" name="date" value="Aprile"> Aprile <br>
+        <input type="radio" name="date" value="Maggio"> Maggio <br>
+
+        <br><br>
+
+        PREPARAZIONE NELLA LINGUA:<br>
+        <input type="radio" name="preparazione" value="Si"> Si <br>
+        <input type="radio" name="preparazione" value="No"> No <br>
+
+		<br><br>
+
+        PERSONALIZZAZIONE:<br>
+        <input type="checkbox" name="personalizzare[]" value="Bagno Privato"> Bagno Privato (+50) <br>
+        <input type="checkbox" name="personalizzare[]" value="Stanza Singola"> Stanza Singola (+120) <br>
+        <input type="checkbox" name="personalizzare[]" value="Guida Turistica"> Guida Turistica (+140) <br>
+        <input type="checkbox" name="personalizzare[]" value="Pasti Inclusi"> Pasti Inclusi Tradizionali (+280) <br>
+
+        <br><hr><br>
+
+        <input type="submit" value="INVIA">
+        <input type="reset" value="CANCELLA">
+    </form>
+</body>
+</html>
