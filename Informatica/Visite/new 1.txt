@@ -1,0 +1,34 @@
+SELECT Cognome, Nome, Data_n
+FROM Pazienti, Ricoveri, Reparti
+WHERE (Pazienti.cod_fiscale=Ricoveri.cod_fiscale_fk) 
+and (Reparti.nome_reparto=Ricoveri.nome_reparto_fk) 
+and (Reparti.nome_reparto=[Inserisci il nome del reparto]);
+
+SELECT nome_reparto
+FROM Reparti, Ricoveri, Pazienti
+WHERE (Pazienti.cod_fiscale=Ricoveri.cod_fiscale_fk) 
+and (Reparti.nome_reparto=Ricoveri.nome_reparto_fk)
+and (Pazienti.cognome=[Inserisci il cognome])
+and (Pazienti.nome=[Inserisci il nome])
+and (Pazienti.data_n=[Inserisci la data di nascita]);
+
+SELECT COUNT (*)
+FROM Pazienti, Medici, Visite
+WHERE (Medici.codice_medico=Visite.codice_medico_fk)
+and (Pazienti.cod_fiscale=Visite.cod_fiscale_fk)
+and (Medici.cognome=[Inserisci il cognome]);
+
+SELECT COUNT (codice_visita)
+FROM Visite
+WHERE data between 01/10/2023 and 31/12/2023;
+
+SELECT Nome
+FROM Reparti
+WHERE Capienza=(SELECT MAX (Capienza)
+				FROM Reparti);
+
+
+SELECT Cognome
+FROM Medici, Reparti
+WHERE (Medici.nome_reparto_fk=Reparti.nome_reparto)
+and (Reparti.nome_reparto=[Inserisci il nome del reparto]);
