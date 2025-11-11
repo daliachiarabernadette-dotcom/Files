@@ -1,0 +1,7 @@
+Nome	Dragon Ball
+Editore	EDIFUMETTO
+Edizione	Italiana
+Volume	1
+Scrittore	Akira Toriyama
+Prezzo	4
+Descrizione	Son Goku, un bambino con la coda di scimmia e la forza smisurata, incontra un giorno una ragazza di nome Bulma. Ella è alla ricerca delle sette sfere del drago, potenti oggetti magici che, se riuniti, permettono di evocare il drago Shenron, creatura che esaudisce un qualunque desiderio a colui che l'ha richiamato.

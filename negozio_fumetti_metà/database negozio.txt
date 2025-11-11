@@ -1,0 +1,39 @@
+Microsoft Windows [Versione 10.0.19045.4291]
+(c) Microsoft Corporation. Tutti i diritti sono riservati.
+
+C:\Users\chiar>cd\
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.28-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database Negozio Fumetti;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Fumetti' at line 1
+MariaDB [(none)]> create database negozio;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use negozio;
+Database changed
+MariaDB [negozio]> CREATE TABLE Prodotto (id INT (11) NOT NULLA AUTO_INCREMENT primary key, nome varchar (60) NOT NULL , editore varchar (30) NOT NULL, edizione varchar (30) NOT NULL, volume int NOT NULL, scrittore varchar (60) NOT NULL, prezzo int NOT NULL, quantita int(11) NOT NULL, smalling varchar (256));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULLA AUTO_INCREMENT primary key, nome varchar (60) NOT NULL , editore varcha...' at line 1
+MariaDB [negozio]> CREATE TABLE Prodotto (id INT (11) NOT NULL AUTO_INCREMENT primary key, nome varchar (60) NOT NULL , editore varchar (30) NOT NULL, edizione varchar (30) NOT NULL, volume int NOT NULL, scrittore varchar (60) NOT NULL, prezzo int NOT NULL, quantita int(11) NOT NULL, smalling varchar (256));
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [negozio]> CREATE TABLE Cliente (email varchar(64) NOT NULL, password char(60) NOT NULL, nome varchar(32) NOT NULL, cognome varchar(32) NOT NULL, comune varchar(32) NOT NULL, provincia char(2) NOT NULL, indirizzo varchar(64) NOT NULL, cap char(5) NOT NULL, telefono varchar(10), codfiscale char(16), PRIMARY KEY (email));
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [negozio]> ALTER TABLE Prodotto ADD COLUMN Descrizione VARCHAR(256) AFTER prezzo;
+
+MariaDB [negozio]> ALTER TABLE Prodotto CHANGE Descrizione Descrizione VARCHAR(500);
